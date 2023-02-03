@@ -1,14 +1,13 @@
 # KodeKloud Ambassador  Onboarding Process
 
-Welcome to the GitHub repository for the [KodeKloud Ambassador Program](https://kodekloud.com/pages/ambassador-program) Onboarding Process. This is a  GitHub repo for KodeKloud Ambassadors to use in getting to know about KodeKloud Learning Resources/Info Guides, which they can use to train themselves.
+Welcome to the GitHub repository for the [KodeKloud Ambassador Program](https://kodekloud.com/pages/ambassador-program) Onboarding Process. This is a  GitHub repo for KodeKloud Ambassadors to learn about KodeKloud Learning Resources/Info Guides, which they can use to train themselves.
 
-By going through this Onboarding Process, you will grow your skills with the latest DevOps Technologies and aware others with the right learning path! 
- 
-As you are navigating the technical onboarding, feel free to ask questions or raise PR for improvements in documentation. Happy Onboarding!
+By going through this Onboarding Process, you will grow your skills with the latest DevOps Technologies and be aware of others with the right learning path! 
+As you navigate the technical onboarding, feel free to ask questions or raise PR for improvements in documentation. Happy Onboarding!
 
 ## Resources for Completing the Onboarding
 ### Code of Conduct
-KodeKloud Ambassadors enthusiastically impart their expertise to their peers. We also want our ambassadors to embody certain standards and positively display community spirit by conducting themselves with respect and restraint whenever they engage with people, inside and outside the program. Being a budding technologist who can speak to the larger community is not enough - we care deeply about a person's character and leadership skills.
+KodeKloud Ambassadors enthusiastically impart their expertise to their peers. We also want our ambassadors to embody specific standards and positively display community spirit by conducting themselves with respect and restraint whenever they engage with people, inside and outside the program. Being a budding technologist who can speak to the larger community is not enough - we care deeply about a person's character and leadership skills.
 
 [KodeKloud Info Guide: Get to know about Labs/Playgrounds  ](https://kodekloud.com/pages/playgrounds)
 
@@ -36,7 +35,7 @@ KodeKloud Ambassadors enthusiastically impart their expertise to their peers. We
 
 [Linux Foundation Certified System Administrator -(LFCS)](https://kodekloud.com/courses/linux-foundation-certified-system-administrator-lfcs/)
 
- [AZ - 104 : Microsoft Azure Administrator ](https://kodekloud.com/courses/az-104-microsoft-azure-administrator/)
+ [AZ - 104: Microsoft Azure Administrator ](https://kodekloud.com/courses/az-104-microsoft-azure-administrator/)
  
    [HashiCorp Certified Terraform Associate ](https://kodekloud.com/courses/hashicorp-certified-terraform-associate/)
    
@@ -45,13 +44,14 @@ KodeKloud Ambassadors enthusiastically impart their expertise to their peers. We
 
 ## Best Books for DevOps Career
 
-The Phoenix Project
+[The Phoenix Project](https://www.amazon.in/Phoenix-Project-Devops-Helping-Business/dp/1942788290)
 	
-The Unicorn Project
+[The Unicorn Project](https://www.amazon.in/Unicorn-Project-Developers-Disruption-Thriving-ebook/dp/B07QT9QR41)
 	
-The DevOps Handbook
+[The DevOps Handbook](https://www.amazon.in/Devops-Handbook-World-class-Reliability-Organizations/dp/1950508404/ref=asc_df_1950508404/?tag=googleshopdes-21&linkCode=df0&hvadid=545177321956&hvpos=&hvnetw=g&hvrand=3626048328456138933&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9298340&hvtargid=pla-1187802203476&psc=1)
 	
-Effective DevOps
+[Effective DevOps](https://www.oreilly.com/library/view/effective-devops/9781491926291/)
+
 ## Ultimate Blogs for DevOps
  [Learn HashiCorp Terraform](https://kodekloud.com/blog/learn-hashicorp-terraform/)
  
@@ -70,4 +70,4 @@ Effective DevOps
 
 
 # Thank you for completing the Technical Onboarding! 
-If you would like to provide feedback or suggestions, create an issue on this repository [with this link](https://github.com/kodekloudhub/KodeKloud-Ambassador-Onboarding/) and we'll be sure to look into your suggestions! 😊
+If you would like to provide feedback or suggestions, create an issue on this repository [with this link](https://github.com/kodekloudhub/KodeKloud-Ambassador-Onboarding/), and we'll be sure to look into your suggestions! 😊
