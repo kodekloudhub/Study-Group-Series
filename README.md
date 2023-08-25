@@ -40,7 +40,7 @@ Welcome to our weekly challenge series, where we present you with real-world sce
 
 To join our study group discussions, collaborate with peers, and participate in the weekly challenges, please join our KodeKloud Slack community using the following link:
 
-[Join KodeKloud Slack]([https://example.com/kodekloud-slack-invite](https://join.slack.com/t/kodekloud/shared_invite/zt-1zw1zq99v-qBWAcHil9VeaewjmsuvSog))
+ [Join KodeKloud Slack](https://join.slack.com/t/kodekloud/shared_invite/zt-1zw1zq99v-qBWAcHil9VeaewjmsuvSog)
 
 ## 🌱 Let's Elevate Your Kubernetes Journey!
 
