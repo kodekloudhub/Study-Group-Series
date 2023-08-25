@@ -15,7 +15,7 @@ Welcome to our weekly challenge series, where we present you with real-world sce
 1. **Fork the Repository**: Start by visiting our [CKA-Study-Group](https://github.com/kodekloudhub/CKA-Study-Group) repository on GitHub. Fork the repository to your own GitHub account by clicking the "Fork" button in the upper right corner of the repository page.
 2. **Clone the Repository**: Once you have forked the repository, clone your forked copy to your local machine using the git clone command.
 3. **Navigate to Challenges**: Inside the cloned repository, go to the "Study Group Challenges" folder. You'll see subfolders organized by challenges, each housing that week's challenge.
-4. **Stay Updated**: Monitor the dedicated #cka-study-group Slack channel for weekly challenge announcements. If you haven't joined yet, click [here](https://join.slack.com/t/kodekloud/shared_invite/zt-1zw1zq99v-qBWAcHil9VeaewjmsuvSog) to stay informed about the latest challenges.
+4. **Stay Updated**: Monitor the dedicated #cka-study-group Slack channel for weekly challenge announcements. If you haven't joined yet, click [here](https://kodekloud.com/pages/community/) to stay informed about the latest challenges.
 5. **Work on Your Solution**: Read the challenge description and work on your solution. Use your knowledge of Kubernetes concepts and best practices to tackle the problem effectively.
 6. **Submit Your Solution**: Inside the "Study Group Submissions" folder, find the challenge-specific folder (e.g., "Challenge-1-Responses"). Create a Markdown file with your username (e.g., "user_name.md") to document your solution. You can use the [challenge_response_template.md](https://github.com/kodekloudhub/CKA-Study-Group/blob/main/Study%20Group%20Submissions/Challenge-1-Responses/challenge_response_template.md) as a guide for formatting your submission.
 7. **Commit and Push**: Once you have added your solution to the appropriate folder, commit your changes with a descriptive message and push them to your forked repository on GitHub.
@@ -40,7 +40,7 @@ Welcome to our weekly challenge series, where we present you with real-world sce
 
 To join our study group discussions, collaborate with peers, and participate in the weekly challenges, please join our KodeKloud Slack community using the following link:
 
- [Join KodeKloud Slack](https://join.slack.com/t/kodekloud/shared_invite/zt-1zw1zq99v-qBWAcHil9VeaewjmsuvSog)
+ [Join KodeKloud Slack](https://kodekloud.com/pages/community/)
 
 ## 🌱 Let's Elevate Your Kubernetes Journey!
 
