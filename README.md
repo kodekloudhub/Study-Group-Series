@@ -44,4 +44,4 @@ To join our study group discussions, collaborate with peers, and participate in 
 
 ## 🌱 Let's Elevate Your Kubernetes Journey!
 
-Don't miss this opportunity to accelerate your path to becoming a Certified Kubernetes Administrator. Secure your spot for the introductory call and join us in this transformative learning experience. Together, we'll unlock the full potential of Kubernetes!
+Don't miss this opportunity to accelerate your path to becoming a Certified Kubernetes Administrator. Join us in this transformative learning experience. Together, we'll unlock the full potential of Kubernetes!
