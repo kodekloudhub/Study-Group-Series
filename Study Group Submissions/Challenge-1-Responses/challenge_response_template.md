@@ -1,6 +1,8 @@
-**Name**: Example
+**Name**: user-name
 
-**Email**: user-email@example.com
+**Slack User ID**: 00000000000
+
+**Email**: user-email@example.com   
 
 ---
 
