@@ -122,3 +122,80 @@ POD LOGS
 2023/08/30 15:26:43 [notice] 1#1: start worker process 33
 
 ```
+
+
+
+## CHALLENGE 2
+#### SOLUTION DETAILS
+
+Task 2: Propose a solution to ensure high availability of the service during and after deployments. Consider the following requirements:
+
+Minimize the occurrence of 503 - Service Unavailable errors during deployments.
+Ensure that the service is only considered ready when all its required dependencies are also ready
+
+Liveness Probe : The liveness probe is responsible for determining whether a container is alive or dead. If the liveness probe fails (returns an error), Kubernetes will restart the container.
+During deployment, liveness probes quickly detect and replace containers with issues.
+* It can indirectly help prevent 503 errors by ensuring that containers that are unresponsive or in a failed state are restarted promptly. If a container becomes unresponsive, it's replaced, reducing the chances of a long-lasting 503 error.
+
+Readiness Probe: The readiness probe is responsible for determining whether a container is ready to receive incoming network traffic. If the readiness probe fails (returns an error), the container is not included in the pool of endpoints for a Service.
+* Readiness probes are crucial during deployment to confirm that a container is ready before it gets traffic. They prevent routing requests to containers that are still initializing or not fully functional.
+* It prevent 503 errors during deployment by blocking traffic to unready containers. If a container is still initializing, it won't receive requests until it's ready, preventing 503 errors from unprepared containers.
+
+## CODE SNIPPET
+
+```
+Production Deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: production-app
+spec:
+  selector:
+    matchLabels:
+      app: prod-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: prod-app
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: environment
+                operator: In
+                values:
+                - production
+      containers:
+        - image: nginx:latest
+          name: nginx
+          ports:
+            - containerPort: 80  
+
+          # Readiness probe
+          readinessProbe:
+            failureThreshold: 3
+          httpGet:
+            path: /actuator/health/readiness
+            port: 80
+            scheme: HTTP
+          periodSeconds: 20
+          successThreshold: 1
+          timeoutSeconds: 60
+          initialDelaySeconds: 60        
+
+          # Liveness probe
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness 
+              port: 80
+            initialDelaySeconds: 60  
+            periodSeconds: 10   
+            timeoutSeconds: 60
+            successThreshold: 1
+            failureThreshold: 3    
+
+```
