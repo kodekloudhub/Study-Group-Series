@@ -67,18 +67,28 @@ spec:
             name: nginx-conf
 ```
 
-#### Step 3: Validate the Deployment
+#### Step 3: Expose the service
 
-1. Retrieve the IP address of the pod:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-proxy-service
+spec:
+  selector:
+    app: nginx-proxy-deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+```
+
+#### Step 4: Validate the Deployment
+
+1. Get the service IP:
 
 ```bash
-kubectl get pods -o wide
-```
-
-For instance, the result may show:
-
-```
-nginx-proxy-deployment-56bb6db74f-5j6tk   2/2     Running   0          4m4s   10.42.0.15   controlplane   <none>           <none>
+kubectl get svc nginx-proxy-service
 ```
 
 2. Test the setup:
