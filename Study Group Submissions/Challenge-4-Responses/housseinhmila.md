@@ -21,7 +21,7 @@ kubectl create serviceaccount developer
 We create an API token for the "developer" service account. This token is used by the "developer" to authenticate when making API requests to the Kubernetes cluster.
 
 ### Code Snippet
-```
+```yaml
 kubectl apply -f - <<EOF
 apiVersion: v1
 kind: Secret
@@ -41,7 +41,7 @@ API_TOKEN=$(kubectl get secret $SECRET_NAME -o jsonpath='{.items[].data.token}' 
 We create a ClusterRole named "read-deploy-pod-clusterrole" with specific permissions. This ClusterRole defines what actions the developer is allowed to perform within the cluster. In this case, the permissions are limited to get, list, and watch actions on resources like pods, pod logs, and deployments.
 
 ### Code Snippet
-```
+```yaml
    apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRole
    metadata:
@@ -52,14 +52,17 @@ We create a ClusterRole named "read-deploy-pod-clusterrole" with specific permis
      #
      # at the HTTP level, the name of the resource for accessing Secret
     # objects is "secrets"
-    resources: ["pods","pods/log","deployments"]
-    verbs: ["get", "watch", "list"]
+     resources: ["pods","pods/log"]
+     verbs: ["get", "watch", "list"]
+   - apiGroups: ["apps"]
+     resources: ["deployments"]
+     verbs: ["get", "watch", "list"]
 ```
 #### Create a ClusterRoleBinding: 
 We create a ClusterRoleBinding named "developer-read-deploy-pod" that binds the "developer" ServiceAccount to the "read-deploy-pod-clusterrole" ClusterRole. 
 
 ### Code Snippet
-```
+```yaml
    apiVersion: rbac.authorization.k8s.io/v1
    # This cluster role binding allows anyone in the "manager" group to re    ad secrets in any namespace.
    kind: ClusterRoleBinding
