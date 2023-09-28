@@ -12,11 +12,11 @@
 
 After reading task, I've decided to create yaml templates that will be used to easy configuration and management of all resources.
 
-I've create `pesistentvolume.yaml` and `pesistentvolumeclaim.yaml` files and after that applied them to the cluster:
+I've create `persistentvolume.yaml` and `persistentvolumeclaim.yaml` files and after that applied them to the cluster:
 
 ```bash
-kubectl apply -f pesistentvolume.yaml
-kubectl apply -f pesistentvolumeclaim.yaml
+kubectl apply -f persistentvolume.yaml
+kubectl apply -f persistentvolumeclaim.yaml
 ```
 
 To check that everything is ok I've used `kubectl get pv` and `kubectl get pvc` commands:
@@ -94,7 +94,7 @@ And as you can see data is still there, so persistent volume claim works correct
 
 ### Code Snippet
 
-#### pesistentvolume.yaml
+#### persistentvolume.yaml
 ```yaml
 apiVersion: v1
 kind: PersistentVolume
@@ -110,7 +110,7 @@ spec:
     path: /mnt/mongo
 ```
 
-#### pesistentvolumeclaim.yaml
+#### persistentvolumeclaim.yaml
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
