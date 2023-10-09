@@ -1,4 +1,6 @@
-# wear-deployment.yaml
+# nginx-ingress-setup-solution
+
+## wear-deployment.yaml
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -23,9 +25,8 @@ spec:
         - containerPort: 8080
 ```
 ---
-
+## wear-service.yaml
 ```yaml
-# wear-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -42,8 +43,8 @@ spec:
     app: wear-deployment
 ```
 ---
+## video-deployment.yaml
 ```yaml
-# video-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -67,8 +68,8 @@ spec:
         - containerPort: 8080
 ```
 ---
+## video-service.yaml
 ```yaml
-# video-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -85,8 +86,8 @@ spec:
     app: video-deployment
 ```
 ---
+## ecommerce-ingress.yaml
 ```yaml
-# ecommerce-ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
