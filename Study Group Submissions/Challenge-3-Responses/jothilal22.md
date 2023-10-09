@@ -10,7 +10,6 @@ Imagine you have a website, and you want it to be super reliable and handle lots
 
 * First, there's the "simple-webapp," which is like the heart of your website. It knows how to show your web pages and listens for requests on the internet at port 8080.
 
-
 * Think of 'nginx-proxy' as a traffic director for your website, just like a friendly hotel receptionist. It stands at the main entrance (port 80) and guides visitors to the 'simple-webapp' (port 8080), ensuring they find what they're looking for on your website smoothly.
 
 First we will create a configmap 
