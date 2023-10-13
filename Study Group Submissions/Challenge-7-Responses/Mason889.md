@@ -18,6 +18,15 @@ Have AWS account.
 
 After reading task, I've decided to create 3 virtual machines in AWS.
 
+And setup AWS Network Load Balancer (NLB) with 3 targets (one per control plane node).
+
+I've opened such ports for NLB:
+* 6443 - for control plane nodes
+* 2379-2380 - for etcd
+* 10250 - for kubelet API
+* 10251 - for kube-scheduler
+* 10252 - for kube-controller-manager
+
 I've spinned 3 EC2 instances based on Ubuntu images with names `control-plane-1`, `control-plane-2`, `control-plane-3` and kubeadm, kubelet and kubectl using commands below.
 
 ```bash
@@ -47,13 +56,13 @@ sudo sysctl net.ipv4.ip_forward=1
 On the `control-plane-1` node I've initialized the cluster:
 
 ```bash
-sudo kubeadm init --control-plane-endpoint <control-plane-1 private DNS record>:6443 --upload-certs --kubernetes-version 1.28.0
+sudo kubeadm init --control-plane-endpoint <NLB DNS record>:6443 --upload-certs --kubernetes-version 1.28.0
 ```
 
 In the output of the command I've found the command to join other control plane nodes to the cluster:
 
 ```bash
-kubeadm join <control-plane-1 private DNS record>:6443 --token e2ya3q.qn6om3tbo4pwvspl \
+kubeadm join <NLB DNS record>:6443 --token e2ya3q.qn6om3tbo4pwvspl \
 	--discovery-token-ca-cert-hash sha256:23528857afadce668be595d8954995257f27f1d984001f025cceec1fdd99071f \
 	--control-plane --certificate-key 3200e4d214ccbf384bc5f1e95e9eeea40035d96af499ac82b3a531965b8209c7
 ```
@@ -98,7 +107,7 @@ Required to do prerequisite steps on the worker node before joining it to the cl
 I've created one worker node using the following command:
 
 ```bash
-kubeadm join <control-plane-1 private DNS record>:6443 --token e2ya3q.qn6om3tbo4pwvspl \
+kubeadm join <NLB DNS record>:6443 --token e2ya3q.qn6om3tbo4pwvspl \
 	--discovery-token-ca-cert-hash sha256:23528857afadce668be595d8954995257f27f1d984001f025cceec1fdd99071f
 ```
 
