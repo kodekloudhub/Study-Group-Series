@@ -1,11 +1,12 @@
 **Name**: user-name
 
-**Slack User ID**: 00000000000
+**Discord ID**: 00000000000
 
 **Email**: user-email@example.com   
 
 ---
-
+##Video Solution 
+OR 
 ## Solution
 
 ### Solution Details
